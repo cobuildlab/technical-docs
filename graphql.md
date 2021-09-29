@@ -53,3 +53,4 @@ A video for a better explanation
 https://user-images.githubusercontent.com/34176666/135188105-881386ca-41e9-4867-b087-7f22bc672855.mp4
 
 
+### How to use the genrated `types` and `TypedDocumentNode`?

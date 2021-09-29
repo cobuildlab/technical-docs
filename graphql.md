@@ -23,11 +23,12 @@ npm i graphql
 ```
 
 > Codegen is needed because we need to precompile `.graphql` files into `DocumentNode`, and burns the types in it to create `TypedDocumentNode` object.
-2. Create GraphQL-Codegen configuration file, and point to your GraphQL schema and your `.graphql` operations files:
+2. Create GraphQL-Codegen configuration file (`codegen.yml`) and the root of the project, and point to your GraphQL schema and your `.graphql` operations files:
 
 ```yml
+overwrite: true
 schema: SCHEMA_FILE_OR_ENDPOINT_HERE
-documents: "./src/**/*.graphql"
+documents: "src/**/*.graphql"
 generates:
   src/shared/types/generated.ts:
     plugins:

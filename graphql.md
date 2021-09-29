@@ -1,10 +1,10 @@
-1. Graphql Code generator <-> 8base configuration
+# Graphql Code generator <-> 8base configuration
 
 We use [Graphql code generator](https://www.graphql-code-generator.com/docs/getting-started/index) 
 which is a tools that read the graphql schema and generate a file with all the types
 for tables, queries and mutations
 
-## How to use?
+### How to use?
 
 
 

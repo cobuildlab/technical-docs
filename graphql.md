@@ -54,3 +54,8 @@ https://user-images.githubusercontent.com/34176666/135188105-881386ca-41e9-4867-
 
 
 ### How to use the genrated `types` and `TypedDocumentNode`?
+
+
+https://user-images.githubusercontent.com/34176666/135191668-4666fc35-8a68-4fed-ab7e-37aa0b3c7449.mp4
+
+

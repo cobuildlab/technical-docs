@@ -39,4 +39,11 @@ generates:
         field: true
       maybeValue: T
 ```
+3. Then add the `npm script` to run the generator and build the types from the schema
+```json
+  "scripts": {
+    "generate": "graphql-codegen --config codegen.yml"
+  },
+```
+4. Run `npm run generate` and enjoy the types.
 

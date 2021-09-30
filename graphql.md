@@ -96,11 +96,9 @@ generates:
 Then follow the previos step from the 3
 
 
-Uploading intalar-gcg-apollo-hooks.mp4…
 
 
 ### How to used it
 
-Uploading user-apollo-hooks.mp4…
 
 

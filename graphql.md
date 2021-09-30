@@ -86,7 +86,7 @@ generates:
     plugins:
       - typescript
       - typescript-operations
-      - typed-document-node
+      - typescript-react-apollo
     config:
       maybe: T
       onlyOperationTypes: true

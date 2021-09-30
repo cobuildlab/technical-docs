@@ -58,4 +58,39 @@ https://user-images.githubusercontent.com/34176666/135188105-881386ca-41e9-4867-
 
 https://user-images.githubusercontent.com/34176666/135191668-4666fc35-8a68-4fed-ab7e-37aa0b3c7449.mp4
 
+### How to use with React Apollo Hooks?
+1. Install this library, and GraphQL Codegen and the relevant plugins:
 
+```
+npm i -D @graphql-codegen/cli @graphql-codegen/typescript @graphql-codegen/typescript-operations @graphql-codegen/typescript-react-apollo
+```
+And if you don't already have a dependency for `graphql`, add it to your project:
+
+```
+npm i graphql
+```
+
+2. Create GraphQL-Codegen configuration file (`codegen.yml`) and the root of the project, and point to your GraphQL schema and your `.graphql` operations files:
+
+```yml
+overwrite: true
+schema: SCHEMA_FILE_OR_ENDPOINT_HERE
+documents: "src/**/*.graphql"
+generates:
+  src/shared/types/types.ts:
+    plugins:
+      - typescript
+    config:
+      maybe: T
+  src/shared/types/operations.ts:
+    plugins:
+      - typescript
+      - typescript-operations
+      - typed-document-node
+    config:
+      maybe: T
+      onlyOperationTypes: true
+      avoidOptionals:
+        field: true
+```
+Then follow the previos step from the 3

@@ -62,7 +62,7 @@ https://user-images.githubusercontent.com/34176666/135191668-4666fc35-8a68-4fed-
 1. Install this library, and GraphQL Codegen and the relevant plugins:
 
 ```
-npm i -D @graphql-codegen/cli @graphql-codegen/typescript @graphql-codegen/typescript-operations @graphql-codegen/typescript-react-apollo
+npm i -D @graphql-codegen/cli @graphql-codegen/typescript @graphql-codegen/typescript-operations @graphql-codegen/typescript-react-apollo @graphql-codegen/add
 ```
 And if you don't already have a dependency for `graphql`, add it to your project:
 
@@ -77,21 +77,24 @@ overwrite: true
 schema: SCHEMA_FILE_OR_ENDPOINT_HERE
 documents: "src/**/*.graphql"
 generates:
-  src/shared/types/types.ts:
+  src/shared/types/generated.ts:
     plugins:
-      - typescript
-    config:
-      maybe: T
-  src/shared/types/operations.ts:
-    plugins:
+      - add:
+          content: '/* eslint-disable */'
       - typescript
       - typescript-operations
+          onlyOperationTypes: true
+            avoidOptionals:
+              field: true
       - typescript-react-apollo
     config:
       maybe: T
-      onlyOperationTypes: true
-      avoidOptionals:
-        field: true
+      scalars:
+        JSON: {}
+        DateTime: string
+        Date: string
+        BigInt: string
+        Time: string
 ```
 Then follow the previos step from the 3
 

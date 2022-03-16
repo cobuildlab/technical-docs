@@ -78,6 +78,7 @@ export async function sendEmail(email: {
 
 Then the usage es very simple
 Mjml alse has a desktop app that can help with the template creation.
+You can check the [documentation](https://documentation.mjml.io/) to learn how to build the templates
 With the template string we pass it to the function to send the email
 
 ```ts

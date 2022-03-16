@@ -77,8 +77,10 @@ export async function sendEmail(email: {
 ```
 
 Then the usage es very simple
-Mjml alse has a desktop app that can help with the template creation.
+Mjml alse has a [desktop app](https://mjml.io/download) that can help with the template creation.
 With the template string we pass it to the function to send the email
+<img width="1678" alt="image" src="https://user-images.githubusercontent.com/34176666/158641296-33c1a450-f515-46f6-906a-56e92a6124ac.png">
+
 
 ```ts
 // email-webhook.ts
